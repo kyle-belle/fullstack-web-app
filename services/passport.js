@@ -43,8 +43,7 @@ Passport.use(new google_strategy({
 Passport.use(new facebook_strategy({
     clientID : keys.facebook_client_id,
     clientSecret : keys.facebook_client_secret,
-    callbackURL : "/auth/facebook/callback",
-    proxy: true
+    callbackURL : "/auth/facebook/callback"
 }, async (access_token, refresh_token, profile, done) => {
         console.log("Access Token : " + access_token);
         console.log("Refresh Token : " + refresh_token);
