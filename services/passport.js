@@ -22,8 +22,8 @@ Passport.deserializeUser((id, done) => {
 Passport.use(new google_strategy({
     clientID : keys.google_client_id,
     clientSecret : keys.google_client_secret,
-    callbackURL : `${url}/auth/google/callback`,
-    //proxy: true this is not fucking working fuck you google stategy
+    callbackURL : `/auth/google/callback`,
+    proxy: true //this is not fucking working fuck you google stategy
 }, async (access_token, refresh_token, profile, done) => {
         console.log("Access Token : " + access_token);
         console.log("Refresh Token : " + refresh_token);
