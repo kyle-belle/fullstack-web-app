@@ -22,12 +22,12 @@ Passport.use(new google_strategy({
     clientID : keys.google_client_id,
     clientSecret : keys.google_client_secret,
     callbackURL : "/auth/google/callback",
-    proxy: true,
+    proxy: true
 }, async (access_token, refresh_token, profile, done) => {
-    // console.log("Access Token : " + access_token);
-    // console.log("Refresh Token : " + refresh_token);
-    // console.log("profile : ",  profile);
-    // console.log("done : ", done);
+    console.log("Access Token : " + access_token);
+    console.log("Refresh Token : " + refresh_token);
+    console.log("profile : ",  profile);
+    console.log("done : ", done);
 
     const existing_user = await User.findOne({google_id : profile.id});
     if(existing_user){
