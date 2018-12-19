@@ -2,6 +2,7 @@ const Passport = require("passport");
 const google_strategy = require("passport-google-oauth20").Strategy;
 const Mongoose = require("mongoose");
 const facebook_strategy = require("passport-facebook").Strategy;
+const url = require("../config/url");
 
 const keys = require("../config/keys");
 
@@ -21,13 +22,13 @@ Passport.deserializeUser((id, done) => {
 Passport.use(new google_strategy({
     clientID : keys.google_client_id,
     clientSecret : keys.google_client_secret,
-    callbackURL : "/auth/google/callback",
-    proxy: true
+    callbackURL : `${url}/auth/google/callback`,
+    //proxy: true this is not fucking working fuck you google stategy
 }, async (access_token, refresh_token, profile, done) => {
-    console.log("Access Token : " + access_token);
-    console.log("Refresh Token : " + refresh_token);
-    console.log("profile : ",  profile);
-    console.log("done : ", done);
+        console.log("Access Token : " + access_token);
+        console.log("Refresh Token : " + refresh_token);
+        console.log("profile : ",  profile);
+        console.log("done : ", done);
 
     const existing_user = await User.findOne({google_id : profile.id});
     if(existing_user){
@@ -44,12 +45,12 @@ Passport.use(new facebook_strategy({
     clientID : keys.facebook_client_id,
     clientSecret : keys.facebook_client_secret,
     callbackURL : "/auth/facebook/callback",
-    proxy: true
+    proxy: true // thanks for working facebook strategy
 }, async (access_token, refresh_token, profile, done) => {
-        // console.log("Access Token : " + access_token);
-        // console.log("Refresh Token : " + refresh_token);
-        // console.log("profile : ",  profile);
-        // console.log("done : ", done);
+        console.log("Access Token : " + access_token);
+        console.log("Refresh Token : " + refresh_token);
+        console.log("profile : ",  profile);
+        console.log("done : ", done);
 
         const existing_user = await User.findOne({facebook_id : profile.id});
         if(existing_user){
