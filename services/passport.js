@@ -1,5 +1,5 @@
 const Passport = require("passport");
-const google_strategy = require("passport-google-oauth20").Strategy;
+const google_strategy = require("passport-google-oauth20");
 const Mongoose = require("mongoose");
 const facebook_strategy = require("passport-facebook");
 
