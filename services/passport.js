@@ -22,8 +22,7 @@ Passport.use(new google_strategy({
     clientID : keys.google_client_id,
     clientSecret : keys.google_client_secret,
     callbackURL : "/auth/google/callback",
-    proxy: true,
-    passReqToCallback: true
+    proxy: true
 }, async (access_token, refresh_token, profile, done) => {
     // console.log("Access Token : " + access_token);
     // console.log("Refresh Token : " + refresh_token);
@@ -47,10 +46,10 @@ Passport.use(new facebook_strategy({
     callbackURL : "/auth/facebook/callback",
     proxy: true
 }, async (access_token, refresh_token, profile, done) => {
-        console.log("Access Token : " + access_token);
-        console.log("Refresh Token : " + refresh_token);
-        console.log("profile : ",  profile);
-        console.log("done : ", done);
+        // console.log("Access Token : " + access_token);
+        // console.log("Refresh Token : " + refresh_token);
+        // console.log("profile : ",  profile);
+        // console.log("done : ", done);
 
         const existing_user = await User.findOne({facebook_id : profile.id});
         if(existing_user){
