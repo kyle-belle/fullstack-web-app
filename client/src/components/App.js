@@ -6,6 +6,7 @@ import './App.css';
 
 import Header from "./header";
 import Landing from "./landing";
+import Footer from "./footer"
 const dashboard = () => <h2>Dashboard</h2>;
 const survey_new = () => <h2>New Survey</h2>;
 
@@ -29,6 +30,8 @@ class App extends Component {
               <Route exact path="/" component={Landing} />
               <Route path="/surveys" component={dashboard} />
               <Route path="/surveys/new" component={survey_new} />
+              
+              <Footer />
 
             </div>
 

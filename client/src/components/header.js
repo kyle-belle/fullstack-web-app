@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
+import Payment from "./payment"
 import "./App.css";
 
 class Header extends Component {
@@ -24,6 +25,8 @@ class Header extends Component {
             default:
             return <ul className="right nav-links">
 
+            <li><p className="credits">Credits : {this.props.auth.credits}</p></li>
+            <li><Payment /></li>
             <li><a href="#new" id="new">New</a></li>
             <li><a href="#dashboard" id="dashboard">Dashboard</a></li>
             <li><a href="/api/logout" id="logout">Logout</a></li>

@@ -6,5 +6,8 @@ module.exports = {
     facebook_client_secret: process.env.FACEBOOK_CLIENT_SECRET,
 
     mongodb_link: process.env.MONGO_DB_LINK,
-    cookie_key: process.env.COOKIE_KEY
+    cookie_key: process.env.COOKIE_KEY,
+
+    stripe_public_key: process.env.STRIPE_PUBLIC_KEY,
+    stripe_secret_key: process.env.STRIPE_SECRET_KEY
 }

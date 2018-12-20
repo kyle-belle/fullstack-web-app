@@ -43,6 +43,20 @@ article, aside, footer, header, .nav, section {
   zoom: 1;
 }
 
+.columns-3{
+  box-sizing: border-box;
+  width: 33%;
+  display: inline-block;
+}
+
+.credits{
+  display: inline;
+  height: 56px;
+  padding: 10px 35px;
+  font-weight: bold;
+  background-color: rgb(255,150,160);
+}
+
 .nav{
   color: #fff;
   background-color: lightgreen;
@@ -51,12 +65,41 @@ article, aside, footer, header, .nav, section {
   line-height: 56px;
 }
 
+.nav ul{
+}
+
 .nav-header{
   width: 95%;
   margin: 0 auto;
   position: relative;
   height: 100%;
 }
+
+.nav-header .button{
+  box-sizing: border-box;
+  padding: 8px 20px; 
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.nav-header .button:hover{
+  cursor: pointer;
+}
+
+.nav-header .payment-button{
+  background-color: rgb(100,150,250);
+  color: white;
+  border: 2px solid rgb(100,150,250);
+}
+
+.nav-header .payment-button:hover{
+  background-color: rgb(120,170,255);
+  border: 2px solid rgb(120,170,255);
+}
+
+.nav-header .payment-button:active{
+  box-shadow: none;
+}
+
 
 /* .nav-header ul{
   display: inline-block;
@@ -135,7 +178,13 @@ a.nav-branding{
 
 .container{
   position: relative;
-  width: 95%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container-2{
+  position: relative;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -202,11 +251,11 @@ a.nav-branding{
 
 .landing-wrapper{
   position: relative;
-  height: 500px;
   /* background-image: url("http://localhost:3000/mail.png"); */
 }
 
 .landing{
+  position: relative;
   background-image: url("http://localhost:3000/mail.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -230,7 +279,7 @@ a.nav-branding{
   width: 30%;
   position: absolute;
   left: 35%;
-  top: 25%;
+  top: 30%;
   font-size: 2.8rem;
   text-align: center;
   color: rgb(0,150,0)
@@ -240,6 +289,7 @@ a.nav-branding{
   display: inline-block;
   background-color: rgb(0,150,0);
   color: white;
+  border: 2px solid rgb(0,150,0);
   border-radius: 5px;
 }
 
@@ -284,6 +334,37 @@ a.nav-branding{
 .landing-wrapper .card .primary-text, .landing-wrapper .card .secondary-text{
   color: rgba(0,0,0,0.3);
   text-align: center;
+}
+
+.footer-wrapper{
+  position: relative;
+  background-color: rgb(110,230,110);
+  border-top: 8px solid rgb(100,150,250);
+}
+
+.footer{
+  color: white;
+  font-weight: bold
+}
+
+ul li{
+  list-style-type: none;
+}
+
+.footer li{
+  margin: 10px 0;
+}
+
+.category{
+  margin: 10px 0;
+}
+
+.copyright{
+  display: block;
+  text-align: center;
+  margin-top: 40px;
+  padding: 40px 0;
+  color: white;
 }
 
 @keyframes App-logo-spin {

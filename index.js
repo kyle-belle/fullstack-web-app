@@ -3,6 +3,7 @@ const cookie_session = require("cookie-session");
 const passport = require("passport");
 const mongoose = require("mongoose");
 const keys = require("./config/keys");
+const parser = require("body-parser")
 
 require("./db-models/users");
 require("./services/passport");
@@ -10,6 +11,8 @@ require("./services/passport");
 mongoose.connect(keys.mongodb_link, {useNewUrlParser: true});//connects to mongo database
 
 const app = express(); //creates an express app returning a super-object of sorts
+
+app.use(parser.json());
 app.use(cookie_session({
     maxAge : 30 *24 * 60 * 60 * 1000,
     keys: [keys.cookie_key]
@@ -23,6 +26,7 @@ app.get('/', (req, res) => { //handler for get request to said directory
 });
 
 require("./routes/auth-routes")(app);
+require("./routes/stripe-routes")(app);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT); //sets up app to listen on port 5000
