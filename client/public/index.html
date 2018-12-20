@@ -36,5 +36,31 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+      
+      window.onload = () => {
+        var sign_up = document.getElementById("sign-up-modal");
+        if(sign_up){
+            sign_up.addEventListener("click", () => {
+                var hidden = document.querySelector(".hidden");
+                hidden.style.display = 'block';
+                hidden.style.zIndex = "100";
+
+                console.log(sign_up);
+          });
+        }
+
+      var x = document.getElementById("X");
+      if(x){
+        x.addEventListener("click", () => {
+          var hidden = document.querySelector(".hidden");
+          hidden.style.display = 'none';
+          hidden.style.zIndex = "-1";
+        });
+      }
+
+    }
+
+    </script>
   </body>
 </html>
