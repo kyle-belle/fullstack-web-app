@@ -256,7 +256,7 @@ a.nav-branding{
 
 .landing{
   position: relative;
-  background-image: url("./mail.png");
+  background-image: url("../mail.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: 40%;
