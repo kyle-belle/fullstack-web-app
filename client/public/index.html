@@ -51,11 +51,13 @@
         }
 
       var x = document.getElementById("X");
-      x.addEventListener("click", () => {
-        var hidden = document.querySelector(".hidden");
-        hidden.style.display = 'none';
-        hidden.style.zIndex = "-1";
-      })
+      if(x){
+        x.addEventListener("click", () => {
+          var hidden = document.querySelector(".hidden");
+          hidden.style.display = 'none';
+          hidden.style.zIndex = "-1";
+        });
+      }
 
     }
 
