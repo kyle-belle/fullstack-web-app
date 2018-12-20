@@ -21,9 +21,9 @@ app.use(cookie_session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.get('/', (req, res) => { //handler for get request to said directory
-    res.send({hello: 'world'});
-});
+// app.get('/', (req, res) => { //handler for get request to said directory
+//     res.send({hello: 'world'});
+// });
 
 require("./routes/auth-routes")(app);
 require("./routes/stripe-routes")(app);
