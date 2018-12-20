@@ -23,7 +23,9 @@ class App extends Component {
           
           <BrowserRouter>
 
-            <div>
+          <div className="everything">
+
+            <div className="everything-except-footer">
 
               <Header />
 
@@ -31,9 +33,12 @@ class App extends Component {
               <Route path="/surveys" component={dashboard} />
               <Route path="/surveys/new" component={survey_new} />
               
-              <Footer />
-
             </div>
+
+            <Footer />
+
+          </div>
+
 
           </BrowserRouter>
 
