@@ -12,7 +12,7 @@ class Footer extends Component {
 
                 <div className="footer container">
 
-                    <div className="columns-3">
+                    <div className="columns-3" >
 
                         <h2 className="category">Company</h2>
 
