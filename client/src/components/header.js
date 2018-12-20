@@ -9,6 +9,22 @@ class Header extends Component {
     //     super(props);
     // }
 
+    sign_up = () => {
+        var hidden = document.querySelector(".hidden");
+        if(hidden){
+            hidden.style.display = 'block';
+            hidden.style.zIndex = "100";
+
+            console.log(hidden);
+        }
+    }
+
+    x = () => {
+        var hidden = document.querySelector(".hidden");
+        hidden.style.display = 'none';
+        hidden.style.zIndex = "-1";
+    }
+
     render_header(){
         switch(this.props.auth){
             case null:
@@ -17,8 +33,8 @@ class Header extends Component {
             case false:
                 return <ul className="right nav-links">
 
-                    <li><a href="#sign-up" id="sign-up-modal">sign-up</a></li>
-                    <li><a href="#log-in">log-in</a></li>
+                    <li><a id="sign-up-modal" onClick={this.sign_up}>sign-up</a></li>
+                    <li><a id="log-in">log-in</a></li>
 
                     </ul>;
             
@@ -27,8 +43,8 @@ class Header extends Component {
 
             <li><p className="credits">Credits : {this.props.auth.credits}</p></li>
             <li><Payment /></li>
-            <li><a href="#new" id="new">New</a></li>
-            <li><a href="#dashboard" id="dashboard">Dashboard</a></li>
+            <li><a href="/new" id="new">New</a></li>
+            <li><a href="/surveys" id="dashboard">Dashboard</a></li>
             <li><a href="/api/logout" id="logout">Logout</a></li>
 
             </ul>;
@@ -54,7 +70,7 @@ class Header extends Component {
 
                 <div className="modal hidden" >
 
-                    <a href="#x" id="X">X</a>
+                    <a id="X" onClick={this.x}>X</a>
 
                     <div className="content">
 

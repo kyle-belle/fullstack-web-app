@@ -11,6 +11,7 @@ body{
 
 a{
   text-decoration: none;
+  cursor: pointer;
 }
 
 #X{
@@ -125,7 +126,7 @@ article, aside, footer, header, .nav, section {
   height: 100%;
   width: 100%;
   font-size: 1.2rem;
-
+  cursor: pointer;
 }
 
 .nav-links li a:hover{
@@ -152,7 +153,7 @@ a.nav-branding{
 .modal{
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.5);
 }
@@ -162,7 +163,7 @@ a.nav-branding{
   left: 35%;
   top: 15%;
   width: 30%;
-  height: 70%;
+  height: 450px;
   background-color: rgb(240,240,240);
   border-radius: 2px;
   display: block;
