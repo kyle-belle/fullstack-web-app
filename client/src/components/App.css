@@ -19,7 +19,7 @@ a{
 }
 
 #X{
-  position: absolute;
+  position: fixed;
   top: 5px;
   left: 15px;
   font-size: 200%;
@@ -159,6 +159,7 @@ a.nav-branding{
   top: 0;
   width: 100%;
   height: 100%;
+  overflow: auto;
   background-color: rgba(0,0,0,0.5);
 }
 
@@ -169,9 +170,10 @@ a.nav-branding{
   width: 30%;
   height: 450px;
   background-color: rgb(240,240,240);
-  border-radius: 2px;
+  /* border-radius: 2px; */
   display: block;
   margin: auto auto;
+  /* border-bottom: 20px rgba(0, 0, 0, 0); */
   text-align: center;
   color: black;
 }
@@ -205,7 +207,7 @@ a.nav-branding{
   padding: 12px 25px;
   width: 100%;
   border: 2px solid gray;
-  border-radius: 5px;
+  border-radius: 3px;
   box-sizing: border-box;
 }
 

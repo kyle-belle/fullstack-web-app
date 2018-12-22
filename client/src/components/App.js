@@ -19,6 +19,7 @@ class App extends Component {
 
   render() {
     return (
+      (window.screen.width>=900)?
       <div>
           
           <BrowserRouter>
@@ -42,7 +43,7 @@ class App extends Component {
 
           </BrowserRouter>
 
-      </div>
+      </div>:<h2>you are not allowed to view this website with a mobile device</h2>
     );
   }
 }
