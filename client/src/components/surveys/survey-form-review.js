@@ -1,8 +1,9 @@
 import React from 'react';
 import {connect} from "react-redux";
+import {withRouter} from "react-router-dom";
 import * as actions from "../../actions"
 
-const Servey_form_review = ({onClick, form, submit_survey}) => {
+const Servey_form_review = ({onClick, form, submit_survey, history}) => {
     return ( 
 
         <div className="new-survey">
@@ -41,7 +42,7 @@ const Servey_form_review = ({onClick, form, submit_survey}) => {
                 </div>
 
                 <button className="button left yellow floating" onClick={onClick}>Back</button>
-                <button className="button right green floating" onClick={() => submit_survey(form)}>Send</button>
+                <button className="button right green floating" onClick={() => submit_survey(form, history)}>Send <i className="material-icons">email</i></button>
 
             </div>
         
@@ -55,4 +56,4 @@ function map_state_to_props(state){
     };
 }
  
-export default connect(map_state_to_props, actions)(Servey_form_review);
+export default connect(map_state_to_props, actions)(withRouter(Servey_form_review));
