@@ -56,9 +56,9 @@ class Header extends Component {
         console.log(this.props);
         return ( 
             <div>
-                <div className="nav">
+                <div className="nav" id="nav">
 
-                    <div className="nav-header">
+                    <div className="nav-header" id="nav-header">
 
                         <Link to={"/"} className="left nav-branding">SurMail</Link>
 

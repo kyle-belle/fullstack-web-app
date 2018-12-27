@@ -62,6 +62,35 @@
 
     // }
 
+    window.onload = () => {
+
+      var nav = document.getElementById("nav");
+      var nav_header = document.getElementById("nav-header");
+
+      var current_scroll_pos;
+      var previous_scroll_pos = window.scrollY;
+      if(nav){
+        var nav_offset = nav.offsetTop;
+      }
+
+      function sticky_nav(){
+        current_scroll_pos = window.scrollY;
+        if (current_scroll_pos < previous_scroll_pos) {
+          nav.style.height = "56px";
+          nav.classList.add("fixed");
+        } else if(current_scroll_pos > 0){
+          nav.style.height = "0px";
+          nav.classList.remove("fixed");
+        }
+        
+        previous_scroll_pos = current_scroll_pos;
+      }
+
+      window.onscroll = () => {
+        sticky_nav();
+      }
+    }
+
     </script>
   </body>
 </html>
