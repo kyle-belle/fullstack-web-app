@@ -49,7 +49,8 @@ class Mailer extends helper.Mail {
             body: this.toJSON()
         });
 
-        return this.sendgrid.API(request);
+
+        return (await this.sendgrid.API(request));
 
     }
 

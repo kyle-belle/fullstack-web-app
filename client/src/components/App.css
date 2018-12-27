@@ -6,7 +6,12 @@
 }
 
 .everything-except-footer{
-  min-height: calc(100vh - 300px);
+  min-height: /*calc(100vh - 300px)*/ 100vh;
+}
+
+button{
+  padding: 0;
+  border: none;
 }
 
 body{
@@ -104,7 +109,6 @@ article, aside, footer, header, .nav, section {
 .nav-header .payment-button:active{
   box-shadow: none;
 }
-
 
 /* .nav-header ul{
   display: inline-block;
@@ -215,11 +219,31 @@ a.nav-branding{
   margin: 5px 0;
 }
 
-.modal a.button, a.button, button{
-  padding: 8px 15px;
+.modal a.button, a.button, button, .button{
+  text-align: center;
+  padding: 15px 25px;
+  min-width: 200px;
   display: inline-block;
   text-decoration: none;
   font-weight: bold;
+  cursor: pointer; 
+  border-radius: 2px;
+}
+
+.floating{
+  box-shadow: 2px 2px 3px  rgba(0,0,0,0.5);
+}
+
+.floating:focus{
+  border: 1px black solid;
+}
+
+.button{
+  font-size: 1rem;
+}
+
+.button i{
+  font-size: 1rem;
 }
 
 .google{
@@ -231,6 +255,10 @@ a.nav-branding{
   margin: 10px 0px;
 }
 
+.red{
+  background-color: red;
+  color: white;
+}
 .facebook{
   background-color: blue;
   border-radius: 5px;
@@ -374,6 +402,150 @@ ul li{
   margin-top: 40px;
   padding: 40px 0;
   color: white;
+}
+
+.circle{
+  border-radius: 50%;
+}
+
+.fixed-button-bottom-r{
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+}
+
+a.floating-button, .floating-button{
+  display: inline-block;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.4);
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-size: 2.5rem;
+  transition: all;
+  transition-duration: 0.05s;
+}
+
+a.floating-button:hover, .floating-button:hover{
+  box-shadow: 6px 6px 8px rgba(0,0,0,0.4);
+  height: 110%;
+  width: 110%;
+  font-size: 2.75rem;
+}
+
+a.floating-button:active, .floating-button:active{
+  box-shadow: none;
+  height: 105%;
+  width: 105%;
+  font-size: 2.55rem;
+}
+
+a.green, .green{
+  background-color: rgb(0,150,0);
+  color: white;
+}
+
+.survey-form{
+  padding: 50px 30px;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border: 3px solid lightgray;
+}
+
+.survey-form input{
+  transition: all;
+  transition-duration: 0.3s;
+  width: 100%;
+  height: 6vh;
+  font-size: 1rem;
+  margin: 0 auto;
+  border: none;
+  border-bottom: 3px solid gray;
+}
+
+.survey-form input:focus{
+  width: 100%;
+  height: 10vh;
+  font-size: 1.1rem;
+  border-bottom: 3px solid rgb(0,150,0);
+}
+
+.survey-form input[id="body"]:focus{
+  width: 100%;
+  height: 30vh;
+  font-size: 1.2rem;
+  border-bottom: 3px solid rgb(0,150,0);
+}
+
+.form-inputs{
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.survey-form .form-label{
+  text-align: left;
+  display: block;
+  margin: 15px 0 10px 0;
+  font-size: 1.2rem;
+  color: rgb(0,150,0)
+
+}
+
+.form-field{
+  margin: 20px 0;
+}
+
+.green[class~="button"]:hover, .green[class~="button"]:focus{
+  background-color: rgb(0,200,0)
+}
+
+.red[class~="button"]:hover{
+  background-color: rgb(255, 80, 80);
+}
+
+.yellow{
+  background-color: rgb(250, 200, 80);
+  color: white;
+}
+
+.yellow[class~="button"]:hover{
+  background-color: rgb(255, 215, 90);
+  color: white;
+}
+
+.new-survey h1{
+  margin: 30px 0;
+}
+
+.right{
+  float: right;
+}
+
+.left{
+  float: left;
+}
+
+.form-review{
+  margin: 0px 0 40px 0;
+}
+
+.form-review h2{
+  color: rgb(0,150,0);
+}
+
+.form-review h3{
+  padding-top: 10px;
+  border-bottom: #282c34 solid 2px;
+}
+
+i.liga{
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: 'liga';
+     -moz-font-feature-settings: 'liga';
+font-feature-settings: 'liga';
 }
 
 @keyframes App-logo-spin {

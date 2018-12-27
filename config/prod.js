@@ -11,5 +11,7 @@ module.exports = {
     stripe_public_key: process.env.STRIPE_PUBLIC_KEY,
     stripe_secret_key: process.env.STRIPE_SECRET_KEY,
 
-    sendgrid_key: process.env.SENDGRID_KEY
+    sendgrid_key: process.env.SENDGRID_KEY,
+
+    url: "https://surmail.herokuapp.com"
 }

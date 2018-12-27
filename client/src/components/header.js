@@ -43,7 +43,7 @@ class Header extends Component {
 
             <li><p className="credits">Credits : {this.props.auth.credits}</p></li>
             <li><Payment /></li>
-            <li><a href="/new" id="new">New</a></li>
+            <li><a href="/surveys/new" id="new">New</a></li>
             <li><a href="/surveys" id="dashboard">Dashboard</a></li>
             <li><a href="/api/logout" id="logout">Logout</a></li>
 
