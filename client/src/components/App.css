@@ -18,6 +18,10 @@ body{
   min-height: 100vh;
 }
 
+/* #root{
+  //margin-top: 56px;
+} */
+
 a{
   text-decoration: none;
   cursor: pointer;
@@ -61,7 +65,7 @@ article, aside, footer, header, .nav, section {
 
 .credits{
   display: inline;
-  height: 56px;
+  /* height: 56px; */
   padding: 10px 35px;
   font-weight: bold;
   background-color: rgb(255,150,160);
@@ -73,7 +77,6 @@ article, aside, footer, header, .nav, section {
 }
 
 .nav{
-  position: absolute;
   z-index: 2;
   color: #fff;
   background-color: lightgreen;
@@ -83,10 +86,11 @@ article, aside, footer, header, .nav, section {
   box-shadow: 0px 1px 10px 5px rgba(0,0,0,0.3);
   transition: all;
   transition-duration: 0.2s;
+  clear: both;
 }
 
-.nav ul{
-}
+/* .nav ul{
+} */
 
 .nav-header{
   width: 95%;
@@ -162,7 +166,11 @@ a.nav-branding{
   font-weight: bold;
   font-size: 2.0rem;
   margin: auto 10px;
+}
 
+a.nav-branding img{
+  height: 40px;
+  transform: translateY(8px);
 }
 
 .nav-header .left{
@@ -554,6 +562,75 @@ a.green, .green{
 .form-review h3{
   padding-top: 10px;
   border-bottom: #282c34 solid 2px;
+}
+
+.dashboard{
+ position: relative;
+ width: 90%;
+ margin: 0 auto;
+}
+
+.dashboard h1{
+  color: rgb(0,150,0);
+  margin-top: 20px;
+}
+
+.dashboard-survey:first-of-type{
+  margin-top: 30px;
+}
+
+.dashboard-survey{
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: rgb(220,240,220);
+  border: 2px dashed gray;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0,250,0,0.7);
+}
+
+.dashboard-survey .survey-title{
+  color: rgb(0,150,0);
+  margin-bottom: 15px;
+}
+
+.dashboard-survey .survey-subject{
+  margin-bottom: 10px;
+  color: rgb(80,100,80)
+}
+
+.dashboard-survey .survey-body{
+  line-height: 1.5;
+  font-weight: bold;
+  color: rgb(100,110,100)
+}
+
+.dashboard-survey .stats{
+  border-top: 2px solid gray;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.dashboard-survey .date{
+  display: block;
+  text-align: right;
+}
+
+.dashboard-survey .stat:first-of-type{
+  margin-left: 5px;
+}
+
+.dashboard-survey .stat span{
+  font-weight: normal;
+}
+
+.dashboard-survey .stat{
+  display: inline-block;
+  color: orange;
+  font-weight: bold;
+  margin: 0 10px;
 }
 
 i.liga{

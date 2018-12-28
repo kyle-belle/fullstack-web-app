@@ -75,12 +75,15 @@
 
       function sticky_nav(){
         current_scroll_pos = window.scrollY;
-        if (current_scroll_pos < previous_scroll_pos) {
+        if (current_scroll_pos < previous_scroll_pos && current_scroll_pos != 0) {
           nav.style.height = "56px";
-          nav.classList.add("fixed");
-        } else if(current_scroll_pos > 0){
+          nav.style.position = "fixed";
+          nav.style.top = "0";
+        } else if(current_scroll_pos > 56){
           nav.style.height = "0px";
-          nav.classList.remove("fixed");
+          nav.style.position = "relative";
+        } else if(current_scroll_pos <= 56 || current_scroll_pos == 0){
+          nav.style.position = "relative";
         }
         
         previous_scroll_pos = current_scroll_pos;

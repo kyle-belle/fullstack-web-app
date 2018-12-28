@@ -55,12 +55,12 @@ class Header extends Component {
 
         console.log(this.props);
         return ( 
-            <div>
+            <React.Fragment>
                 <div className="nav" id="nav">
 
                     <div className="nav-header" id="nav-header">
 
-                        <Link to={"/"} className="left nav-branding">SurMail</Link>
+                        <Link to={"/"} className="left nav-branding"><img src="/logo.png" /> SurMail</Link>
 
                         {this.render_header()}
 
@@ -96,7 +96,7 @@ class Header extends Component {
 
              </div>
 
-            </div>
+            </React.Fragment>
          );
     }
 }
