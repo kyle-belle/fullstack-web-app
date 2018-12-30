@@ -16,7 +16,7 @@ class Payments extends Component {
                 amount={500}
                 token={ (token) => { this.props.handle_token(token) } }
                 stripeKey={process.env.REACT_APP_STRIPE_PUBLIC_KEY}
-            >
+             >{/* currency prop optional. set to usd by default. */}
 
                 <button className="button payment-button">
                     Add Credits

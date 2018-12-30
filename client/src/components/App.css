@@ -2,7 +2,7 @@
 *{
   margin: 0;
   padding: 0;
-  font-family:    Helvetica, verdana, sans-serif, Tahoma
+  font-family: Helvetica, verdana, sans-serif, Tahoma
 }
 
 .everything-except-footer{
@@ -269,12 +269,29 @@ a.nav-branding img{
   font-size: 1rem;
 }
 
+.blue-text{
+  color: rgb(20,150,250);
+}
+
+.green-text{
+  color: rgb(20,150,20);
+}
+
+.yellow-text{
+  color:  rgb(255,200,100)
+}
+
+.red-text{
+  color: rgb(250,50,50);
+}
+
 .google{
-  background-color: red;
+  background-color: white;
   border-radius: 50px !important;
-  color: white;
+  color: black;
   width: 100%;
   box-sizing: border-box;
+  border: 2px gray solid;
   margin: 10px 0px;
 }
 

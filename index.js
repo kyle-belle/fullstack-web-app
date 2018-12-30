@@ -26,6 +26,10 @@ app.use(passport.session());
 //     res.send({hello: 'world'});
 // });
 
+process.on('unhandledRejection', function(reason, promise) {
+    console.log(promise);
+});
+
 require("./routes/auth-routes")(app);
 require("./routes/stripe-routes")(app);
 require("./routes/survey-routes")(app);
@@ -36,7 +40,7 @@ if(process.env.NODE_ENV === "production"){
     const path = require("path");
     app.get("*", (req, res) => {
         res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-    })
+    });
 }
 
 const PORT = process.env.PORT || 5000;

@@ -60,7 +60,7 @@ function validate(values){
     }
 
     errors.recipients = validate_emails(values.recipients);
-    console.log(errors);
+    // console.log(errors);
 
     if(!values.recipients){
         errors.recipients = "please enter atleast one Email!!!";

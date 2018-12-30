@@ -32,13 +32,13 @@ module.exports = (app) => {
     app.post("/api/survey/webhooks", (req, res) => {
        const p = new Path("/api/surveys/:survey_id/:choice");
 
-       console.log(URL);
-       console.log(req.body);
+    //    console.log(URL);
+    //    console.log(req.body);
 
        _.chain(req.body).map(({email, url}) => {
-           console.log(`url: ${url}`);
+        //    console.log(`url: ${url}`);
            const path_name = new URL(url).pathname;
-           console.log(`path_name: ${path_name}`);
+        //    console.log(`path_name: ${path_name}`);
            const match = p.test(path_name);
 
            if(match){
