@@ -1,11 +1,11 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import Survey_list from "./surveys/survey-list";
+import SurveyList from "./surveys/survey-list";
 
 const Dashboard = () => {
     return ( 
         <div className="dashboard">
-            <Survey_list />
+            <SurveyList />
 
             <div className="fixed-button-bottom-r circle">
 

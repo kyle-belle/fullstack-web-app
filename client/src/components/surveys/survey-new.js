@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SurveyForm from "./survey-form";
-import Survey_review from "./survey-form-review"
+import SurveyReview from "./survey-form-review"
 import {reduxForm} from "redux-form";
 
 class survey_new extends Component {
@@ -24,7 +24,7 @@ class survey_new extends Component {
         if(!this.state.review){
             return <SurveyForm onClick={this.toogle_view}/>
         }else{
-            return <Survey_review onClick={this.toogle_view}/>
+            return <SurveyReview onClick={this.toogle_view}/>
         }
     }
 

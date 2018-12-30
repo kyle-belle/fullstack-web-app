@@ -18,9 +18,9 @@ class Footer extends Component {
 
                         <ul className="links">
 
-                            <li><a>About Us</a></li>
-                            <li><a>Careers</a></li>
-                            <li><a>News</a></li>
+                            <li><button className="link">About Us</button></li>
+                            <li><button className="link">Careers</button></li>
+                            <li><button className="link">News</button></li>
 
                         </ul>
 
@@ -32,9 +32,9 @@ class Footer extends Component {
 
                         <ul className="links">
 
-                            <li><a>Pricing</a></li>
-                            <li><a>Features</a></li>
-                            <li><a>Case Studies</a></li>
+                            <li><button className="link">Pricing</button></li>
+                            <li><button className="link">Features</button></li>
+                            <li><button className="link">Case Studies</button></li>
                         
                         </ul>
 
@@ -46,9 +46,9 @@ class Footer extends Component {
 
                         <ul className="links">
 
-                            <li><a>SurMail Help</a></li>
-                            <li><a>surmail@dontEmail.com</a></li>
-                            <li><a>1-555-555-5555</a></li>
+                            <li><button className="link">SurMail Help</button></li>
+                            <li><button className="link">surmail@dontEmail.com</button></li>
+                            <li><button className="link">1-555-555-5555</button></li>
 
                         </ul>
 

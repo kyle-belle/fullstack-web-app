@@ -11,7 +11,7 @@ class survey_list extends Component {
     render_surveys(){
         return this.props.surveys.reverse().map( (survey) => {
             return(
-                <div className="dashboard-survey">
+                <div className="dashboard-survey" key={this.props.surveys.indexOf(survey)}>
 
                     <h2 className="survey-title">{survey.title}</h2>
 

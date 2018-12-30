@@ -8,7 +8,7 @@ import Header from "./header";
 import Landing from "./landing";
 import Footer from "./footer"
 import Dashboard from "./dashboard"
-import survey_new from "./surveys/survey-new";
+import survey_new_wrapper from "./surveys/survey-new-stateless-wrapper";
 
 
 class App extends Component {
@@ -32,7 +32,7 @@ class App extends Component {
 
               <Route exact path="/" component={Landing} />
               <Route exact path="/surveys" component={Dashboard} />
-              <Route exact path="/surveys/new" component={survey_new} />
+              <Route exact path="/surveys/new" component={survey_new_wrapper} />
               
             </div>
 

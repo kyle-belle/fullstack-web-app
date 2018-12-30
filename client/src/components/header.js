@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import Payment from "./payment";
-import firebase from "firebase";
+import firebase from "firebase/app";
+import "firebase/auth";
 import "./App.css";
 
 class Header extends Component {
@@ -106,8 +107,8 @@ class Header extends Component {
             case false:
                 return <ul className="right nav-links">
 
-                    <li><a id="sign-up-modal" onClick={this.sign_up}>sign-up</a></li>
-                    <li><a id="log-in">log-in</a></li>
+                    <li><button className="link" id="sign-up-modal" onClick={this.sign_up}>sign-up</button></li>
+                    <li><button className="link" id="log-in">log-in</button></li>
 
                     </ul>;
             
@@ -116,9 +117,9 @@ class Header extends Component {
 
             <li><p className="credits">Credits : {this.props.auth.credits}</p></li>
             <li><Payment /></li>
-            <li><a href="/surveys/new" id="new">New</a></li>
-            <li><a href="/surveys" id="dashboard">Dashboard</a></li>
-            <li><a href="/api/logout" id="logout">Logout</a></li>
+            <li><Link to="/surveys/new" id="new">New</Link></li>
+            <li><Link to="/surveys" id="dashboard">Dashboard</Link></li>
+            <li><Link to="/api/logout" id="logout">Logout</Link></li>
 
             </ul>;
         }
@@ -133,7 +134,7 @@ class Header extends Component {
 
                     <div className="nav-header" id="nav-header">
 
-                        <Link to={"/"} className="left nav-branding"><img src="/logo.png" /> SurMail</Link>
+                        <Link to={"/"} className="left nav-branding"><img src="/logo.png" alt=""/> SurMail</Link>
 
                         {this.render_header()}
 
@@ -143,7 +144,7 @@ class Header extends Component {
 
                 <div className="modal hidden" >
 
-                    <a id="X" onClick={this.x}>X</a>
+                    <button className="link" id="X" onClick={this.x}>X</button>
 
                     <div className="content">
 
