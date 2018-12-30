@@ -119,7 +119,7 @@ class Header extends Component {
             <li><Payment /></li>
             <li><Link to="/surveys/new" id="new">New</Link></li>
             <li><Link to="/surveys" id="dashboard">Dashboard</Link></li>
-            <li><Link to="/api/logout" id="logout">Logout</Link></li>
+            <li><a href="/api/logout" id="logout">Logout</a></li>
 
             </ul>;
         }
