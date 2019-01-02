@@ -33,6 +33,12 @@ class Landing extends Component {
                             
                             </div>
 
+                            <div className="card-overlay">
+
+                                <p className="tm-description">100%&#8482; is a trademark representing a value anywhere from 0% to 100%</p>
+
+                            </div>
+
                         </div>
 
                         <div className="card">
@@ -51,6 +57,12 @@ class Landing extends Component {
                             
                             </div>
 
+                            <div className="card-overlay">
+
+                                <p className="tm-description">24/7&#8482; is a trademark representing a time period of 24 divided by 7 hours</p>
+
+                            </div>
+
                         </div>
 
                         <div className="card">
@@ -67,6 +79,12 @@ class Landing extends Component {
 
                                 <p className="secondary-text">HTML-Mail&#8482;</p>
                             
+                            </div>
+
+                            <div className="card-overlay">
+
+                                <p className="tm-description">HTML-Mail&#8482; is a trademarked version of html which includes one extra tag/element&lt;mail&gt;&lt;/mail&gt;, heres the kicker, we dont even use that particular tag/element.</p>
+
                             </div>
 
                         </div>
@@ -95,6 +113,12 @@ class Landing extends Component {
                             
                             </div>
 
+                            <div className="card-overlay">
+
+                                <p className="tm-description">Prices&#8482; is a trademark representing the prices before paying</p>
+
+                            </div>
+
                         </div>
 
                         <div className="card">
@@ -113,6 +137,12 @@ class Landing extends Component {
                             
                             </div>
 
+                            <div className="card-overlay">
+
+                                <p className="tm-description">Mind-Read&#8482; is a trademark representing an educated guess at what the person is truly thinking</p>
+
+                            </div>
+
                         </div>
 
                         <div className="card">
@@ -129,6 +159,12 @@ class Landing extends Component {
 
                                 <p className="secondary-text">Moneyback&#8482;</p>
                             
+                            </div>
+
+                            <div className="card-overlay">
+
+                                <p className="tm-description">Moneyback&#8482; is a trademark which guarantees your money back in 5 - 10 years if you are not satisfied</p>
+
                             </div>
 
                         </div>
@@ -157,6 +193,12 @@ class Landing extends Component {
                             
                             </div>
 
+                            <div className="card-overlay">
+
+                                <p className="tm-description">Mind-Read&#8482; is a trademark representing an educated guess at what the person is truly thinking</p>
+
+                            </div>
+
                         </div>
 
                         <div className="card">
@@ -173,6 +215,12 @@ class Landing extends Component {
 
                                 <p className="secondary-text">24/7&#8482;</p>
                             
+                            </div>
+
+                            <div className="card-overlay">
+
+                                <p className="tm-description">Mind-Read&#8482; is a trademark representing an educated guess at what the person is truly thinking</p>
+
                             </div>
 
                         </div>
@@ -193,11 +241,19 @@ class Landing extends Component {
                             
                             </div>
 
+                            <div className="card-overlay">
+
+                                <p className="tm-description">Mind-Read&#8482; is a trademark representing an educated guess at what the person is truly thinking</p>
+
+                            </div>
+
                         </div>
 
                     </div>
 
                 </div>
+
+                <p className="scam">All trademarks and associated images on this site the property of SCAM inc.</p>
 
                 <div className="landing-video">
 

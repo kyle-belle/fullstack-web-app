@@ -14,6 +14,7 @@
   position: relative;
   margin: 0px auto 0 auto;
   padding: 20px 0;
+  border-top: 2px dashed rgb(0,150,0);
   border-bottom: 2px dashed rgb(0,150,0);
   line-height: 1.5;
 }
@@ -292,7 +293,6 @@ a.nav-branding img{
   position: relative;
   width: 100%;
   margin: 0 auto;
-  border-bottom: 2px dashed rgb(0,150,0);
 }
 
 .modal label{
@@ -446,6 +446,7 @@ a.nav-branding img{
 }
 
 .landing-wrapper .card{
+  position: relative;
   box-sizing: border-box;
   width: 25%;
   margin: 30px 4%;
@@ -454,11 +455,52 @@ a.nav-branding img{
   box-shadow: 1px 1px 3px  rgba(0,0,0,0.5), -1px -1px 3px  rgba(0,0,0,0.5);
 }
 
+.landing-wrapper .card:hover .card-overlay{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.landing-wrapper .card .card-overlay{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 0;
+  padding: 0px;
+  background-color: rgba(255,50,50, 0.6);
+  transition: all;
+  transition-duration: 0.5s;
+  text-align: center;
+}
+
+.scam{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  background: rgb(40,50,60);
+  padding: 15px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.landing-wrapper .card .card-overlay .tm-description{
+  font-size: 1.3rem;
+  color: white;
+  margin-top: 160px;
+  display: none;
+}
+
+.landing-wrapper .card:hover .card-overlay .tm-description{
+  display: block;
+}
+
 .landing-wrapper .card .main-feature{
   width: 95%;
   margin: 0 auto;
   min-height:300px;
-  border-bottom: 1px solid rgba(0,0,0,0.3);
+  border-bottom: 1px solid rgba(146, 116, 116, 0.3);
 }
 
 .landing-wrapper .card .main-feature img{
