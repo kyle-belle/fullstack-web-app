@@ -13,7 +13,7 @@ window.axios = axios;
 
 const store = createStore(reducers, {}, applyMiddleware(redux_thunk));
 
-ReactDOM.render((window.screen.width>=900)?<Provider store={store}> <App /> </Provider>:<h2>you are not allowed to view this website with a mobile device</h2>, document.getElementById('root'));
+ReactDOM.render((window.innerWidth>=980)?<Provider store={store}> <App /> </Provider>:<h2>you are not allowed to view this website with a mobile device</h2>, document.getElementById('root'));
 
 // console.log("Stripe public key:", process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 // console.log("Environment :", process.env.NODE_ENV);

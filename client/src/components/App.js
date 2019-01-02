@@ -19,7 +19,7 @@ class App extends Component {
 
   render() {
     return (
-      (window.screen.width>=900)?
+      (window.innerWidth>=980)?
       <div>
           
           <BrowserRouter>
