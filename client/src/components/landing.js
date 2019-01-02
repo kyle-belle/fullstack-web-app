@@ -39,15 +39,15 @@ class Landing extends Component {
                         
                             <div className="main-feature">
 
-                                <img src="brain.png" alt="mind-read"/>
+                                <img src="24-7-2.png" alt="24/7"/>
 
-                                <p className="primary-text">Mind-Read&#8482; give us the ability to get the real, serious answer from users</p>
+                                <p className="primary-text">24/7&#8482; support, always available to help with the <b>very FEW</b> problems you may have</p>
                             
                             </div>
 
                             <div className="feature-name">
 
-                                <p className="secondary-text">Mind-Read&#8482;</p>
+                                <p className="secondary-text">24/7&#8482;</p>
                             
                             </div>
 
@@ -101,15 +101,15 @@ class Landing extends Component {
                         
                             <div className="main-feature">
 
-                                <img src="24-7-2.png" alt="24/7"/>
+                                <img src="brain.png" alt="mind-read"/>
 
-                                <p className="primary-text">24/7&#8482; support, always available to help with the <b>very FEW</b> problems you may have</p>
+                                <p className="primary-text">Mind-Read&#8482; give us the ability to get the real, serious answer from users</p>
                             
                             </div>
 
                             <div className="feature-name">
 
-                                <p className="secondary-text">24/7&#8482;</p>
+                                <p className="secondary-text">Mind-Read&#8482;</p>
                             
                             </div>
 
@@ -132,6 +132,82 @@ class Landing extends Component {
                             </div>
 
                         </div>
+
+                    </div>
+
+                </div>
+
+                <div className="container-3">
+
+                    <div className="features">
+
+                        <div className="card">
+                        
+                            <div className="main-feature">
+
+                                <img src="brain.png" alt="prices"/>
+
+                                <p className="primary-text">Mind-Read&#8482; give us the ability to get the real, serious answer from users</p>
+
+                            </div>
+
+                            <div className="feature-name">
+
+                                <p className="secondary-text">Prices&#8482;</p>
+                            
+                            </div>
+
+                        </div>
+
+                        <div className="card">
+                        
+                            <div className="main-feature">
+
+                                <img src="brain.png" alt="24/7"/>
+
+                                <p className="primary-text">Mind-Read&#8482; give us the ability to get the real, serious answer from users</p>
+                            
+                            </div>
+
+                            <div className="feature-name">
+
+                                <p className="secondary-text">24/7&#8482;</p>
+                            
+                            </div>
+
+                        </div>
+
+                        <div className="card">
+                        
+                            <div className="main-feature">
+
+                                <img src="brain.png" alt="moneyback"/>
+
+                                <p className="primary-text">Mind-Read&#8482; give us the ability to get the real, serious answer from users</p>
+                            
+                            </div>
+
+                            <div className="feature-name">
+
+                                <p className="secondary-text">Moneyback&#8482;</p>
+                            
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div className="landing-video">
+
+                    <video src="laptop-typing-3.mp4" muted autoPlay loop/>
+
+                    <div className="video-overlay">
+
+                        <div className="video-text">Send gluten free surveys easier from anywhere with SurMail, The fastest proven way to send survey with 100%&#8482; response rate with Mind-Read&#8482; which guarantees all feedback provided is truthful, and with Moneyback&#8482; guarantee you can try Surmail risk free. Should this video be at the top? let me know at kylebellle7@gmail.com or whatsapp if you know me personally.</div>
+
+                        <button className="floating button green video-button">Learn How</button>
 
                     </div>
 
