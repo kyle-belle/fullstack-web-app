@@ -42,38 +42,34 @@
     
     <script>
 
-    window.onload = () => {
+    window.onload = function(){
 
       var nav = document.getElementById("nav");
-      var nav_header = document.getElementById("nav-header");
 
       var current_scroll_pos;
-      var previous_scroll_pos = window.scrollY;
+      var previous_scroll_pos = window.scrollY || window.pageYOffset; // IE doesn't support window.scrollY
 
-      if(nav){
-        var nav_offset = nav.offsetTop;
-      }
 
       function sticky_nav(){
-        current_scroll_pos = window.scrollY;
+
+        current_scroll_pos = window.scrollY|| window.pageYOffset;
+
         if (current_scroll_pos < previous_scroll_pos && current_scroll_pos != 0) {
-          nav.style.height = "56px";
-          nav.style.position = "fixed";
-          nav.style.top = "0";
+
+          nav.style.transform = "translateY(0)";
         } else if(current_scroll_pos > 56){
-          nav.style.height = "0px";
-          nav.style.position = "relative";
-        } else if(current_scroll_pos <= 56 || current_scroll_pos == 0){
-          nav.style.position = "relative";
+
+          nav.style.transform = "translateY(-120%)";
         }
         
         previous_scroll_pos = current_scroll_pos;
+        return;
       }
 
-      window.onscroll = () => {
+      window.onscroll = function(){
         sticky_nav();
       }
-      console.log(window.innerWidth);
+      // console.log(window.innerWidth);
     }
 
     </script>

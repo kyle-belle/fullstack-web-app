@@ -43,9 +43,16 @@
 }
 
 .landing-video .video-overlay .video-button{
+  background-color: rgba(0, 150, 0, 0.8)
+}
+
+.landing-video .video-overlay .video-button-div{
   position: relative;
   top: 50%;
-  background-color: rgba(0, 150, 0, 0.8)
+}
+
+.everything{
+  margin-top: 56px;
 }
 
 .everything-except-footer{
@@ -55,7 +62,7 @@
 button.link{
   background-color: rgba(0,0,0,0);
   margin: none;
-  min-width: unset !important;
+  min-width: 0;
   min-height: 56px;
   border-radius: 0px;
   color: white !important;
@@ -65,7 +72,7 @@ button.link{
 }
 
 .links button.link{
-  min-height: unset !important;
+  min-height: 0;
   padding: 0;
   font-weight: 600;
 }
@@ -142,7 +149,9 @@ article, aside, footer, header, .nav, section {
 }
 
 .nav{
-  position: relative;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  position: fixed;
   top: 0;
   z-index: 2;
   color: #fff;
@@ -152,7 +161,7 @@ article, aside, footer, header, .nav, section {
   line-height: 56px;
   box-shadow: 0px 1px 10px 5px rgba(0,0,0,0.6);
   transition: all;
-  transition-duration: 0.2s;
+  transition-duration: 0.3s;
   clear: both;
 }
 

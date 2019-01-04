@@ -59,7 +59,9 @@ class Header extends Component {
 
         // Axios.get(`/auth/firebase/google?${result.additionalUserInfo.profile.id}`);
         // console.log(window.location);
-        window.location = `${window.location.origin}/auth/firebase/google?${result.additionalUserInfo.profile.id}`;
+        //window.location.reload();
+
+        window.location = window.location.origin + "/auth/firebase/google?" + result.additionalUserInfo.profile.id;
         
 
         firebase.auth().onAuthStateChanged(function(user) {
