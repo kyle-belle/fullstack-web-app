@@ -20,9 +20,9 @@ module.exports = (survey) => {
                 
                 <div style="width: 90%; margin: 0 auto; text-align: center; position: relative;">
                     
-                    <a style="position: absolute; display: inline-block; padding: 10px 20px; background-color: rgb(0,150,0); color: white; box-sizing: border-box; text-decoration: none; max-width: 45%; min-width: 30%;" href="${keys.url}/api/surveys/${survey.id}/yes">Yes</a>
+                    <a style="display: inline-block; padding: 10px 20px; background-color: rgb(0,150,0); color: white; box-sizing: border-box; text-decoration: none; max-width: 45%; min-width: 30%; margin: 5px 0; margin-right: 2%;" href="${keys.url}/api/surveys/${survey.id}/yes">Yes</a>
                     
-                    <a style="position: absolute; display: inline-block; padding: 10px 20px; background-color: rgb(0,150,0); color: white; box-sizing: border-box; text-decoration: none; max-width: 45%; min-width: 30%;" href="${keys.url}/api/surveys/${survey.id}/no">Yes</a>
+                    <a style="display: inline-block; padding: 10px 20px; background-color: rgb(0,150,0); color: white; box-sizing: border-box; text-decoration: none; max-width: 45%; min-width: 30%; margin: 5px 0; margin-left: 2%;" href="${keys.url}/api/surveys/${survey.id}/no">Yes</a>
     
                 </div>
     
