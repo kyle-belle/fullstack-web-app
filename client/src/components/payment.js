@@ -18,9 +18,9 @@ class Payments extends Component {
                 stripeKey={process.env.REACT_APP_STRIPE_PUBLIC_KEY}
              >{/* currency prop optional. set to usd by default. */}
 
-                <button className="button payment-button">
+                <p className="button payment-button">
                     Add Credits
-                </button>
+                </p>
 
             </StripeCheckout>
          );
