@@ -253,7 +253,7 @@ class Landing extends Component {
 
                 </div>
 
-                <p className="scam">All trademarks and associated images on this site the property of SCAM inc.</p>
+                <p className="scam">All trademarks and associated images on this site are the property of SCAM inc.</p>
 
                 <div className="landing-video">
 
