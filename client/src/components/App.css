@@ -53,11 +53,12 @@
 
 .everything{
   position: relative;
-  width: 100vw;
+  /* width: 100vw; */
   min-width: 1000px;
 }
 
 .everything-except-footer{
+  padding-top: 56px;
   min-height: /*calc(100vh - 300px)*/ 100vh;
 }
 
@@ -684,9 +685,9 @@ a.green, .green{
   color: white;
 }
 
-.new-survey h1{
+/* .new-survey h1{
   margin: 30px 0;
-}
+} */
 
 .right{
   float: right;
@@ -717,7 +718,7 @@ a.green, .green{
 
 .dashboard h1{
   color: rgb(0,150,0);
-  margin-top: 20px;
+  
 }
 
 .dashboard-survey:first-of-type{

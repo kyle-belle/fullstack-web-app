@@ -25,9 +25,9 @@ class App extends Component {
 
           <div className="everything">
 
-            <div className="everything-except-footer">
-
               <Header />
+
+            <div className="everything-except-footer">
 
               <Route exact path="/" component={Landing} />
               <Route exact path="/surveys" component={Dashboard} />
