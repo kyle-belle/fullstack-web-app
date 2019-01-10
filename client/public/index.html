@@ -134,23 +134,25 @@
 
       function sticky_nav(){
 
-        current_scroll_pos = window.scrollY|| window.pageYOffset;
+        current_scroll_pos = window.scrollY || window.pageYOffset;
 
-        if (current_scroll_pos < previous_scroll_pos && current_scroll_pos != 0) {
+        if ((current_scroll_pos < previous_scroll_pos) && (current_scroll_pos != 0) && (current_scroll_pos > 56)) {
 
-          nav.style.transform = "translateY(0)";
+          nav.style.transform = "translateY(" + (current_scroll_pos - 1) +"px)";
         } else if(current_scroll_pos > 56){
 
           nav.style.transform = "translateY(-120%)";
+        }else if(current_scroll_pos < 56){
+          nav.style.transform = "translateY(0)";
         }
         
         previous_scroll_pos = current_scroll_pos;
         return;
       }
 
-      window.onscroll = function(){
-        sticky_nav();
-      }
+      // window.onscroll = function(){
+      //   sticky_nav();
+      // }
       // console.log(window.innerWidth);
     }
 
