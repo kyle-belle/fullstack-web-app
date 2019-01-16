@@ -258,6 +258,7 @@ class Landing extends Component {
                 <div className="landing-video">
 
                     <video  muted autoPlay loop playsInline webkit-playsinline controls>
+                        <source src="laptop-typing-3.ogv" type="video/ogv" />
                         <source src="laptop-typing-3.mp4" type="video/mp4" />
                     </video>
 
