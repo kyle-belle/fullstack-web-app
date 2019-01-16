@@ -28,6 +28,7 @@
   background-color: rgba(0,255,0,0.15);
   text-align: center;
   box-sizing: border-box;
+  z-index: 2;
 }
 
 .landing-video .video-overlay .video-text{
