@@ -8,7 +8,7 @@ class survey_new extends Component {
     constructor(props){
         super(props);
 
-        this.state = { review: false}
+        this.state = { review: false }
     }
 
     toogle_view = () => {
