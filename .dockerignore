@@ -1,0 +1,4 @@
+*node-module
+*.log
+client
+!client/build

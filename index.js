@@ -22,6 +22,15 @@ app.use(cookie_session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use(function(req, res, next){
+    
+    res.header("Access-Control-Allow-Credentials", "true");
+    res.header("Access-Control-Allow-Origin", req.headers.origin);
+    res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
 // app.get('/', (req, res) => { //handler for get request to said directory
 //     res.send({hello: 'world'});
 // });

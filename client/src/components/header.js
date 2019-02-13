@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import Payment from "./payment";
 import firebase from "firebase/app";
 import "firebase/auth";
+import keys from "../config/keys"
 import "./App.css";
 
 class Header extends Component {
@@ -60,13 +61,13 @@ class Header extends Component {
         // Axios.get(`/auth/firebase/google?${result.additionalUserInfo.profile.id}`);
         // console.log(window.location);
         //window.location.reload();
-
-        window.location = window.location.origin + "/auth/firebase/google?" + result.additionalUserInfo.profile.id;
-        
-
         firebase.auth().onAuthStateChanged(function(user) {
             window.user = user;
         });
+        
+        window.location = keys.url_prefix + "/auth/firebase/google?" + result.additionalUserInfo.profile.id;
+        
+
 
 
     }
@@ -85,12 +86,12 @@ class Header extends Component {
 
         // Axios.get(`/auth/firebase/facebook?${result.additionalUserInfo.profile.id}`);
         // console.log(window.location);
-        window.location = `${window.location.origin}/auth/firebase/facebook?${result.additionalUserInfo.profile.id}`;
-        
-
         firebase.auth().onAuthStateChanged(function(user) {
             window.user = user;
         });
+
+        window.location = `${keys.url_prefix}/auth/firebase/facebook?${result.additionalUserInfo.profile.id}`;
+        
 
 
     }
@@ -121,7 +122,7 @@ class Header extends Component {
             <li><Payment /></li>
             <li><Link to="/surveys/new" id="new">New</Link></li>
             <li><Link to="/surveys" id="dashboard">Dashboard</Link></li>
-            <li><a href="/api/logout" id="logout">Logout</a></li>
+            <li><a href={keys.url_prefix + "/api/logout"} id="logout">Logout</a></li>
 
             </ul>;
         }

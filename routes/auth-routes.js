@@ -9,16 +9,16 @@ module.exports = (app) => {
     
     app.get("/auth/google/callback", Passport.authenticate("google"), (req, res) => {
         // console.log(req.session);
-        res.redirect("/");
+        res.redirect(req.headers.referer);
     });
 
 
     //google firebase
-    app.get("/auth/firebase/google", firebase_id, Passport.authenticate('firebase-google'), (req, res) => {res.redirect("/")});
+    app.get("/auth/firebase/google", firebase_id, Passport.authenticate('firebase-google'), (req, res) => {res.redirect(req.headers.referer)});
 
     
     //facebook firebase
-    app.get("/auth/firebase/facebook", firebase_id, Passport.authenticate('firebase-google'), (req, res) => {res.redirect("/")});
+    app.get("/auth/firebase/facebook", firebase_id, Passport.authenticate('firebase-google'), (req, res) => {res.redirect(req.headers.referer)});
 
     
     app.get("/auth/facebook", Passport.authenticate("facebook", {
@@ -28,7 +28,7 @@ module.exports = (app) => {
     
     app.get("/auth/facebook/callback", Passport.authenticate("facebook"), (req, res) => {
         // console.log(req.session);
-        res.redirect("/");
+        res.redirect(req.headers.referer);
     });
 
     
@@ -39,7 +39,7 @@ module.exports = (app) => {
    
     app.get("/api/logout", (req, res) => {
         req.logout();
-        res.redirect("/");
+        res.redirect(req.headers.referer);
     });
 
 };
