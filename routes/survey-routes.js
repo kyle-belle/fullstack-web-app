@@ -67,14 +67,20 @@ module.exports = (app) => {
         res.send(surveys);
     });
 
+    app.get("/api/surveys/recipients", login, async (req, res) => {
+        console.log(req._parsedUrl.query); 
+        const surveys = await Survey.find({_id: req._parsedUrl.query}).select({recipients: 1});
+        res.send(surveys);
+    });
 
     app.post("/api/survey", login, require_credits, async (req, res) => {
-        const { title, subject, body, recipients } = req.body;
+        const { title, subject, body, recipients, sender } = req.body;
 
         const survey = new Survey({
             title,
             subject,
             body,
+            sender,
             recipients: recipients.split(",").map(email => ({email : email.trim()})),
             _user: req.user.id,
             date_sent: Date.now()

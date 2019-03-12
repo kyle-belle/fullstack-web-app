@@ -72,7 +72,7 @@ button.link{
   color: white !important;
   font-weight: 600;
   padding:0 10px;
-  font-size: 1.15rem
+  font-size: 1.25rem
 }
 
 .links button.link{
@@ -709,6 +709,14 @@ a.green, .green{
 .form-review h3{
   padding-top: 10px;
   border-bottom: #282c34 solid 2px;
+}
+
+.clickable{
+  cursor: pointer;
+}
+
+.clickable:hover{
+  transform: scale(1.1, 1.1, 1.0);
 }
 
 .dashboard{

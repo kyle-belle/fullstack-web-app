@@ -110,8 +110,7 @@ class Header extends Component {
             case false:
                 return <ul className="right nav-links">
 
-                    <li><button className="link" id="sign-up-modal" onClick={this.sign_up}>sign-up</button></li>
-                    <li><button className="link" id="log-in">log-in</button></li>
+                    <li><button className="link" id="sign-up-modal" onClick={this.sign_up}>Sign-In</button></li>
 
                     </ul>;
             

@@ -41,6 +41,13 @@ const Servey_form_review = ({onClick, form, submit_survey, history}) => {
 
                 </div>
 
+                <div className="form-review">
+
+                    <h2>Sender Email</h2>
+                    <h3>{form.sender}</h3>
+
+                </div>
+
                 <button className="button left yellow floating" onClick={onClick}>Back</button>
                 <button className="button right green floating" onClick={() => submit_survey(form, history)}>Send <i className="material-icons">email</i></button>
 

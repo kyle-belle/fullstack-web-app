@@ -10,13 +10,15 @@ class SurveyForm extends Component {
         return (
             <div className="form-inputs">
 
-                <Field label ="Survey Title"type="text" name="title" component={surveyFields} />
+                <Field label="Survey Title"type="text" name="title" component={surveyFields} />
 
                 <Field label="Subject line" type="text" name="subject" component={surveyFields} />
 
                 <Field label="Email body" type="text" name="body" component={surveyFields} />
 
                 <Field label="Recipients List" type="text" name="recipients" component={surveyFields} />
+
+                <Field label="Sender Email" type="text" name="sender" component={surveyFields} />
 
             </div>
         );
@@ -65,13 +67,25 @@ function validate(values){
     if(!values.recipients){
         errors.recipients = "please enter atleast one Email!!!";
     }
-    
+
+    errors.sender = validate_emails(values.sender);
 
     return errors;
 }
+
+function warn(values){
+    const warnings = {}
+
+    if(!values.sender){
+        warnings.sender = "if you do not provide a sender email it will default 'survey@surmail.com'!!!";
+    }
+
+    return warnings;
+}
  
 export default reduxForm({
-    validate,
     form: "surveyForm",
+    validate,
+    warn,
     destroyOnUnmount: false
 })(SurveyForm);
