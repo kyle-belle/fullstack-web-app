@@ -1,5 +1,5 @@
 module.exports = (req, res, next) => {
-    console.log(req);//Url
+    // console.log(req);//Url
 
     next();
 }

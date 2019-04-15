@@ -19,7 +19,7 @@ class Payments extends Component {
              >{/* currency prop optional. set to usd by default. */}
 
                 <p className="button payment-button">
-                    Add Credits
+                    <i className="material-icons icon">add</i> <span className="hide-mobile">Add Credits</span>
                 </p>
 
             </StripeCheckout>

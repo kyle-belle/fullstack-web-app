@@ -8,7 +8,7 @@ export default function(state = {surveys:[], recipients:[]}, action){
             return {...state, surveys: action.payload.reverse() || false};
 
         case FETCH_RECIPIENTS:
-            console.log(action.payload[0]);
+            // console.log(action.payload[0]);
             return {...state, recipients: action.payload[0].recipients, show_id: action.payload[0]._id};
 
         case HIDE_RECIPIENTS:

@@ -138,7 +138,7 @@
 
         if ((current_scroll_pos < previous_scroll_pos) && (current_scroll_pos != 0) && (current_scroll_pos > 56)) {
 
-          nav.style.transform = "translateY(" + (current_scroll_pos - 1) +"px)";
+          nav.style.transform = "translateY(0)";
         } else if(current_scroll_pos > 56){
 
           nav.style.transform = "translateY(-120%)";
@@ -150,9 +150,9 @@
         return;
       }
 
-      // window.onscroll = function(){
-      //   sticky_nav();
-      // }
+      window.onscroll = function(){
+        sticky_nav();
+      }
       // console.log(window.innerWidth);
     }
 

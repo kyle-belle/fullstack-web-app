@@ -102,6 +102,17 @@ class Header extends Component {
         hidden.style.zIndex = "-1";
     }
 
+    drop_down_click = () => {
+        var actions = document.getElementById("actions");
+        if(actions.classList.contains("hide")){
+            actions.classList.remove("hide");
+            actions.classList.add("show");
+        }else{
+            actions.classList.remove("show");
+            actions.classList.add("hide");
+        }
+    }
+
     render_header(){
         switch(this.props.auth){
             case null:
@@ -115,15 +126,25 @@ class Header extends Component {
                     </ul>;
             
             default:
-            return <ul className="right nav-links">
+            return <div className="right header-buttons">
+                <ul className="nav-links">
 
-            <li><p className="credits">Credits : {this.props.auth.credits}</p></li>
-            <li><Payment /></li>
-            <li><Link to="/surveys/new" id="new">New</Link></li>
-            <li><Link to="/surveys" id="dashboard">Dashboard</Link></li>
-            <li><a href={keys.url_prefix + "/api/logout"} id="logout">Logout</a></li>
+                <li className="credit-li"><p className="credits"><i className="material-icons icon">drafts</i> <span className="hide-mobile">Credits</span> : {this.props.auth.credits}</p></li>
+                <li className="add-li"><Payment /></li>
+                
+                </ul>
 
-            </ul>;
+                <ul className="nav-links">
+                <div className="actions-wrapper">
+                <i className="material-icons icon drop-down-btn show-mobile" onClick={this.drop_down_click}>arrow_drop_down</i>
+                    <div className="actions hide" id="actions">
+                        <li><Link to="/surveys/new" id="new">New</Link></li>
+                        <li><Link to="/surveys" id="dashboard">Dashboard</Link></li>
+                        <li><a href={keys.url_prefix + "/api/logout"} id="logout">Logout</a></li>
+                    </div>
+                </div>
+                </ul>
+            </div>
         }
     }
 
@@ -136,7 +157,7 @@ class Header extends Component {
 
                     <div className="nav-header" id="nav-header">
 
-                        <Link to={"/"} className="left nav-branding"><img src="/logo.png" alt=""/> SurMail</Link>
+                        <div className="brand-link-div"><Link to={"/"} className="left nav-branding"><img src="/logo.png" alt=""/> SurMail</Link></div>
 
                         {this.render_header()}
 

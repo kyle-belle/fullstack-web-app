@@ -68,7 +68,7 @@ module.exports = (app) => {
     });
 
     app.get("/api/surveys/recipients", login, async (req, res) => {
-        console.log(req._parsedUrl.query); 
+        // console.log(req._parsedUrl.query); 
         const surveys = await Survey.find({_id: req._parsedUrl.query}).select({recipients: 1});
         res.send(surveys);
     });
