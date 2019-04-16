@@ -1,14 +1,14 @@
 {
-  "main.css": "/static/css/main.74671fe0.chunk.css",
-  "main.js": "/static/js/main.6b34f45d.chunk.js",
-  "main.js.map": "/static/js/main.6b34f45d.chunk.js.map",
-  "static/js/1.74087ab3.chunk.js": "/static/js/1.74087ab3.chunk.js",
-  "static/js/1.74087ab3.chunk.js.map": "/static/js/1.74087ab3.chunk.js.map",
+  "main.css": "/static/css/main.1246277d.chunk.css",
+  "main.js": "/static/js/main.64f4b766.chunk.js",
+  "main.js.map": "/static/js/main.64f4b766.chunk.js.map",
+  "static/js/1.1c453ac8.chunk.js": "/static/js/1.1c453ac8.chunk.js",
+  "static/js/1.1c453ac8.chunk.js.map": "/static/js/1.1c453ac8.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
   "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
   "static/media/App.css": "/static/media/mail.b9b82e5b.png",
-  "static/css/main.74671fe0.chunk.css.map": "/static/css/main.74671fe0.chunk.css.map",
+  "static/css/main.1246277d.chunk.css.map": "/static/css/main.1246277d.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.bf6492925b7b99694b7e1f54cc1214ba.js": "/precache-manifest.bf6492925b7b99694b7e1f54cc1214ba.js",
+  "precache-manifest.16b6b1fcb277c84d363f6dcb9ec3d1e1.js": "/precache-manifest.16b6b1fcb277c84d363f6dcb9ec3d1e1.js",
   "service-worker.js": "/service-worker.js"
 }

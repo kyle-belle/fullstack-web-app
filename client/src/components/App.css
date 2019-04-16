@@ -39,12 +39,12 @@
   margin: 15px auto;
   color: white;
   text-align: center;
-  background-color: rgba(0,150,0,0.5);
+  background-color: rgba(0,150,0,0.3);
   font-weight: bold;
 }
 
 .landing-video .video-overlay .video-button{
-  background-color: rgba(0, 150, 0, 0.8)
+  background-color: rgba(0, 150, 0, 0.5)
 }
 
 .landing-video .video-overlay .video-button-div{
@@ -812,6 +812,7 @@ a.green, .green{
 .icon{
   transform: translateY(2px);
   font-size: 16px;
+  display: inline;
 }
 
 i.liga{
