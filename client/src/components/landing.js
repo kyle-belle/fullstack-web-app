@@ -263,7 +263,7 @@ class Landing extends Component {
 
                     <div className="video-overlay">
 
-                        <div className="video-text">Send gluten free surveys easier from anywhere with SurMail, The fastest proven way to send survey with 100%&#8482; response rate with Mind-Read&#8482; which guarantees all feedback provided is truthful, and with Moneyback&#8482; guarantee you can try Surmail risk free. Should this video be at the top? let me know at kylebellle7@gmail.com .</div>
+                        <div className="video-text">Send gluten free surveys easier from anywhere with SurMail, The fastest proven way to send survey with 100%&#8482; response rate with Mind-Read&#8482; which guarantees all feedback provided is truthful, and with Moneyback&#8482; guarantee you can try Surmail risk free.</div>
 
                         <div className="video-button-div">
                             
