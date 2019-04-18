@@ -127,7 +127,7 @@ class Landing extends Component {
 
                                 <img src="brain.png" alt="mind-read"/>
 
-                                <p className="primary-text">Mind-Read&#8482; give us the ability to get the real, serious answer from users</p>
+                                <p className="primary-text">Mind-Read&#8482; gives us the ability to get the real, serious answer from users</p>
                             
                             </div>
 
@@ -163,7 +163,7 @@ class Landing extends Component {
 
                             <div className="card-overlay">
 
-                                <p className="tm-description">Moneyback&#8482; is a trademark which guarantees your money back in 5 - 10 years if you are not satisfied</p>
+                                <p className="tm-description">Moneyback&#8482; is a trademark which guarantees your money back in 5 - 10 years if you are not satisfied. (not accounting for inflation)</p>
 
                             </div>
 
@@ -181,9 +181,9 @@ class Landing extends Component {
                         
                             <div className="main-feature">
 
-                                <img src="brain.png" alt="prices"/>
+                                <img src="brain.png" alt="brain"/>
 
-                                <p className="primary-text">Mind-Read&#8482; give us the ability to get the real, serious answer from users</p>
+                                <p className="primary-text">Mind-Read&#8482; gives us the ability to get the real, serious answer from users</p>
 
                             </div>
 
@@ -205,9 +205,9 @@ class Landing extends Component {
                         
                             <div className="main-feature">
 
-                                <img src="brain.png" alt="24/7"/>
+                                <img src="brain.png" alt="brain"/>
 
-                                <p className="primary-text">Mind-Read&#8482; give us the ability to get the real, serious answer from users</p>
+                                <p className="primary-text">Mind-Read&#8482; gives us the ability to get the real, serious answer from users</p>
                             
                             </div>
 
@@ -229,9 +229,9 @@ class Landing extends Component {
                         
                             <div className="main-feature">
 
-                                <img src="brain.png" alt="moneyback"/>
+                                <img src="brain.png" alt="brain"/>
 
-                                <p className="primary-text">Mind-Read&#8482; give us the ability to get the real, serious answer from users</p>
+                                <p className="primary-text">Mind-Read&#8482; gives us the ability to get the real, serious answer from users</p>
                             
                             </div>
 

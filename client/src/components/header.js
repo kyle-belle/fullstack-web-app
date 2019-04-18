@@ -9,9 +9,23 @@ import "./App.css";
 
 class Header extends Component {
      constructor(props) {
-         super(props);
+        super(props);
+        document.querySelector("body").addEventListener('click', (e)=>{
+            var actions = document.getElementById("actions");
+            var drop_down_btn = document.querySelector(".drop-down-btn-wrapper");
 
-         this.init_firebase();
+            if(!actions.contains(e.target)){
+                if(e.target.classList.contains("drop-down-btn")){
+                    return;
+                }
+                if(actions.classList.contains("show")){
+                    actions.classList.remove("show");
+                    actions.classList.add("hide");
+                    drop_down_btn.classList.remove("rotate");
+                }
+            }
+        });
+        this.init_firebase();
     }
 
     init_firebase(){
@@ -104,12 +118,15 @@ class Header extends Component {
 
     drop_down_click = () => {
         var actions = document.getElementById("actions");
+        var drop_down_btn = document.querySelector(".drop-down-btn-wrapper");
         if(actions.classList.contains("hide")){
             actions.classList.remove("hide");
             actions.classList.add("show");
+            drop_down_btn.classList.add("rotate");
         }else{
             actions.classList.remove("show");
             actions.classList.add("hide");
+            drop_down_btn.classList.remove("rotate");
         }
     }
 
@@ -136,12 +153,17 @@ class Header extends Component {
 
                 <ul className="nav-links">
                 <div className="actions-wrapper">
-                <i className="material-icons icon drop-down-btn show-mobile" onClick={this.drop_down_click}>arrow_drop_down</i>
+
+                    <div class="drop-down-btn-wrapper">
+                        <i className="material-icons icon drop-down-btn show-mobile" onClick={this.drop_down_click}>arrow_drop_down</i>
+                    </div>
+
                     <div className="actions hide" id="actions">
-                        <li><Link to="/surveys/new" id="new">New</Link></li>
-                        <li><Link to="/surveys" id="dashboard">Dashboard</Link></li>
+                        <li><Link to="/surveys/new" id="new" onClick={this.drop_down_click}>New</Link></li>
+                        <li><Link to="/surveys" id="dashboard" onClick={this.drop_down_click}>Dashboard</Link></li>
                         <li><a href={keys.url_prefix + "/api/logout"} id="logout">Logout</a></li>
                     </div>
+
                 </div>
                 </ul>
             </div>

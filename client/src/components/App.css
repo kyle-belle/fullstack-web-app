@@ -835,8 +835,21 @@ font-feature-settings: 'liga';
   background-color: #282c34;
   padding: 10px;
   border-radius: 50%;
-  margin-left: 5px;
   cursor: pointer;
+}
+
+.drop-down-btn-wrapper{
+  margin-left: 2px;
+  font-size: 0;
+  transition: all;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  max-width: 36px;
+  max-height: 36px
+}
+
+.rotate{
+  transform: rotateZ(-180deg) translateY(-5px);
 }
 
 .show{
